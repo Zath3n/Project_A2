@@ -51,24 +51,7 @@ static void bottom_path() {
 
 }
 
-/**
-* other path
-*/
 
-static void other_path() {
-	int y = 1;
-	int x = 1;
-// move diagonally
-	while (x < WIDTH - 2 && y < HEIGHT - 2) {
-		level1[y][x] = ' ';
-		x++;
-		y++;
-	}
-//move right if hit bottom
-	while (x < WIDTH - 2)
-		level1[y][x++] = ' ';
-
-}
 /**
 *middle path
 */
@@ -90,17 +73,10 @@ void init_maze1() {
 
 	top_path();
 	bottom_path();
-//	other_path();
 	middle_path();
 
 	level1[HEIGHT - 3][WIDTH - 3] = 'F';
 
-//add walls
-//	for (int y = 1; y < HEIGHT - 1; y++)
-//		if (level1[y][1] == ' ') level1[y][0] = '|';
-
-//	for (int x = 1; x < WIDTH - 1; x++)
-//		if (level1[1][x] == ' ') level1[0][x]= '-';
 
 }
 
