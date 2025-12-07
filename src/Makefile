@@ -2,9 +2,9 @@
 
 CC = gcc
 CFLAGS = -Wall -std=c11
-LDFLAGS = -lm
+LDFLAGS = -lncurses -lm
 
-appGame: simpleMazeGame.c
+appGame: main.c levels.c levels.h npc.h npc.c player.c player.h
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 %.o: %.c %.h
@@ -13,7 +13,7 @@ appGame: simpleMazeGame.c
 .PHONY:
 
 clean:
-	rm -f *.o appTestPart2.out
+	rm -f *.o appGame
 
 run: appGame
 	./appGame

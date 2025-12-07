@@ -14,6 +14,18 @@ typedef struct {
 } Player;
 
 
+int SplashArt(){
+
+
+	mvprintw(5, 25, "/$$      /$$  /$$$$$$                             /$$$$$$");
+	mvprintw(6, 25, "| $$$    /$$$ /$$__  $$                           /$$__  $$");
+	mvprintw(7, 25, "| $$$$  /$$$$| $$  \\ $$ /$$$$$$$$  /$$$$$$       | $$  \\__/  /$$$$$$  /$$$$$$/$$$$   /$$$$$$");
+	mvprintw(8, 25, "| $$  $$$| $$| $$__  $$   /$$$$/ | $$$$$$$$      | $$|_  $$  /$$$$$$$| $$ \\$$ \\$$| $$$$$$$$");
+
+
+}
+
+
 
 int MainMenuScreen(){
 
@@ -135,6 +147,7 @@ int main() {
 	while (1){
 
 		
+		int choice = SplashArt();
 		int choice = MainMenuScreen();
 
 		if (choice == '1') {
