@@ -34,9 +34,9 @@ void draw_player(Player *p);
 
 /**
  * 
- * Moves the user based on user keyboard input.
- * Allows the user to move the character with WASD key. If one said button is pressed, 
- * the current location of @ in the console is moved in the direction of the key pressed.
+ * Moves the user based on user keyboard input by allowing the user to move the character with WASD key. 
+ * If one said button is pressed, the current location of @ in the console is moved in the 
+ * direction of the key pressed.
  * 
  */
 void player_move(Player *p, Level *lvl, int key);
