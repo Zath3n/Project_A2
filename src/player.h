@@ -17,8 +17,8 @@
  * 
  */
 typedef struct {
-    int x;
-    int y;
+    int x; /**< initial x ordinate of player */
+    int y; /**< initial y ordinate of player */
     char symbol;
     
 } Player;

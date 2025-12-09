@@ -108,7 +108,7 @@ void pause_game() {
 /**
  * 
  *Switches the screen to the win menu, telling the user they reached the end, until the user presses
- *"p" or "P" to back to the menu.
+ *any key to go back to the menu.
  * 
  */
 void win_screen() {
@@ -121,11 +121,12 @@ void win_screen() {
 
 /**
  * 
- *Helper function to check if the player reached the exit or "F" in to scren with "@" If so, return 1(True).
+ *Function to check if the player reached the exit or "F" in to scren with "@" If so, return 1(True).
  * 
  */
 int player_reached_exit(Player *player, Level *lvl) {
-    // Check the level map at the player’s position
+
+    // Check the level map at the users position
     if (lvl->tiles[player->y][player->x] == 'F') {
         return 1;
     }
@@ -192,7 +193,7 @@ void run_level(void (*load_fn)(Level*)) {
 			player_move(&player, &lvl, ch);
 
 
-		if (player_reached_exit(&player, &lvl)) {
+		if (player_reached_exit(&player, &lvl)) { //if player reaches exit, show win screen and exit loop.
 			win_screen();
 			running = 0;
 			continue;
