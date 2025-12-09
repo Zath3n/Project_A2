@@ -208,7 +208,15 @@ void load_level2(Level *lvl) {
     lvl2_correct_path(lvl);
     lvl2_wrong_path1(lvl);
     lvl2_wrong_path2(lvl);
-    lvl->tiles[HEIGHT-3][WIDTH-3] = 'F'; //Exit of the Game
+
+    // Place exit
+    lvl->tiles[HEIGHT-3][WIDTH-3] = 'F';
+
+    // Place Lever (top-right NPC box)
+    lvl->tiles[5][70] = 'L';
+
+    // Place barricade (blocks exit)
+    lvl->tiles[HEIGHT-6][WIDTH-2] = 'B';
 }
 
 //-----------------Check Functions -------------
@@ -224,9 +232,12 @@ void draw_level(Level *lvl) {
 
 int is_walkable(Level *lvl, int x, int y) {
     
-    if (x < 0 || x >= WIDTH || y < 0 || y >= HEIGHT){
+    if (lvl->tiles[y][x] == '#')
         return 0;
-    }
 
-    return lvl->tiles[y][x] != '#';
+    if (lvl->tiles[y][x] == 'B'){
+        return 0;
+    } 
+
+    return 1;
 }

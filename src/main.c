@@ -6,6 +6,7 @@
  ********************************************************/
 
 #include <curses.h>
+#include <unistd.h>
 #include "player.h"
 #include "npc.h"
 #include "levels.h"
@@ -71,9 +72,10 @@ int MainMenuScreen(){
 
 	mvprintw(14, 5, "CONTROLS:");
 	mvprintw(16, 5, "Move Your Character using: W A S D");
-	mvprintw(17, 5, "Talk to NPC: T");
-	mvprintw(18, 5, "Pause: P");
-	mvprintw(19, 5, "Quit This Awesome Game: Q");
+	mvprintw(17, 5, "To interact with a Lever: X");
+	mvprintw(18, 5, "Talk to NPC: T");
+	mvprintw(19, 5, "Pause: P");
+	mvprintw(20, 5, "Quit This Awesome Game: Q");
 
 	mvprintw(14, 50, "Choose Option Here Please:");
 	mvprintw(16, 50, "Level 1 (Easy): 1");
@@ -188,6 +190,26 @@ void run_level(void (*load_fn)(Level*)) {
 
 		else if (ch == 'p' || ch == 'P')
 			pause_game();
+
+		else if (ch == 'x' || ch == 'X') {
+
+			//If the player is standing on the lever 
+			if (lvl.tiles[player.y][player.x] == 'L') {
+
+    				lvl.tiles[player.y][player.x] = 'l';
+
+    				lvl.tiles[HEIGHT-4][WIDTH-3] = ' ';
+
+
+				// Give player a message
+				clear();
+				mvprintw(15, 28, "You pulled the lever!");
+				mvprintw(17, 25, "The barricade has opened...");
+				refresh();
+				sleep(1);
+			}
+		}
+
 
 		else
 			player_move(&player, &lvl, ch);

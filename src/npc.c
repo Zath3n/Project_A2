@@ -8,6 +8,7 @@
 #include <curses.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 #include "npc.h"
 #include "levels.h"
@@ -54,7 +55,8 @@ void npc_dialog(Player *p, NPC *n){	//talking interactions
 	int dx = (p->x - n->x);
 	int dy = (p->y - n->y);
 
-	if (dx + dy != 1) {	//Player not beside NPC, notify user they need to be.
+	//Player not beside NPC, notify user they need to be.
+	if (abs(dx) + abs(dy) != 1) {	
 		clear();
 		mvprintw(15, 23, "You must stand next to the NPC!");
 		refresh();
@@ -63,7 +65,9 @@ void npc_dialog(Player *p, NPC *n){	//talking interactions
 	}
 
 	clear();
-	mvprintw(15 , 30, "You need Help? IM LOST TOO!");
+	mvprintw(15 , 32, "You want a Hint?");
+	mvprintw(16 , 12, "If the exit is blocked, you must find a lever to open it...");
+
 	refresh();
-	sleep(2);
+	sleep(3);
 }
