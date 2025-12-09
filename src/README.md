@@ -10,8 +10,6 @@ in this case makeing it to the F without getting lost or otherwise being stuck i
 To help users escape, they can first find an NPC represented by "N" to talk to them and maybe
 get some insights on how to escape. 
 
-
-
 Whats the overall goal?
 The overall goal is to escape the mazes. 
 To escape whatever trapped you in the mazes.
