@@ -6,13 +6,15 @@ ID: 3132175 Name: Gabriel
 #GAME PLAN
 Whats the goal of each level?
 The goal is to simply solve the maze by makeing your way to the exit.
-in this case makeing it to the F without getting lost or otherwise being stopped.
+in this case makeing it to the F without getting lost or otherwise being stuck in the maze.
+To help users escape, they can first find an NPC represented by "N" to talk to them and maybe
+get some insights on how to escape. 
 
 
 
 Whats the overall goal?
 The overall goal is to escape the mazes. 
-To escape whatever trapped you in the mazes
+To escape whatever trapped you in the mazes.
 
 What do the levels look like?
 The levels are made up of the character "#"

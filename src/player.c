@@ -1,5 +1,9 @@
-// ID: 3143692 Name: Kye Rich
-// ID: 3132175 Name: Gabriel
+/********************************************************
+ * @file player.c                   
+ * @Brief Public interface for a playing character      
+ * @author Kye R. ID:3143692 & Gabriel N. ID: 3132176                   
+ * @date Dec. 9, 2025                  
+ ********************************************************/
 
 #include <curses.h>
 #include "player.h"
