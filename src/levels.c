@@ -18,7 +18,6 @@ typedef struct {
 
 //-------------------Level 1-----------------------
 
->>>>>>> Stashed changes:src/levels.c
 /*
 *makes a box of '#' to start maze
 */
@@ -157,7 +156,7 @@ static void lvl2_correct_path(Level *lvl) {
     }
 
     while (y < HEIGHT-4){
-        vl->tiles[y++][x] = ' ';
+        lvl->tiles[y++][x] = ' ';
     }
 }
 

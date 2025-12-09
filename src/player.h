@@ -13,8 +13,10 @@
  * 
  */
 typedef struct {
-    int x, y;
+    int x;
+    int y;
     char symbol;
+    
 } Player;
 
 

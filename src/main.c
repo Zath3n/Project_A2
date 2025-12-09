@@ -135,8 +135,7 @@ int player_reached_exit(Player *player, Level *lvl) {
 
 /**
  * 
- *Function that handles running the game. 
- * 
+ *Function that handles running the game. NPC spawn location is changed depending on the level loeaded to
  */
 void run_level(void (*load_fn)(Level*)) {
 
@@ -147,10 +146,12 @@ void run_level(void (*load_fn)(Level*)) {
 	load_fn(&lvl); 
 	init_player(&player);
 
+	//initialize NPC location to 0,0.
 	int npc_x = 0;
 	int npc_y = 0;  
 
-	if (load_fn == load_level1){ //level
+	//NPC Coordinates/Position based on level loaded.
+	if (load_fn == load_level1){ 
 		npc_x = 2;
 		npc_y = 26;
 	} 
@@ -166,6 +167,9 @@ void run_level(void (*load_fn)(Level*)) {
 	while (running){
 
 		erase();
+
+		//updates level, npc, & player status by calling helper function to re-draw new npc & player location
+		//if they moved.
 		draw_level(&lvl);         
 		draw_player(&player);
  		draw_npc(&npc);
@@ -192,8 +196,8 @@ void run_level(void (*load_fn)(Level*)) {
 		}
 
 
-		npc_move(&npc, &lvl, &player);
-		refresh();
+		npc_move(&npc, &lvl, &player); //update npc movement.
+		refresh(); //refreshes the console to apply all the movement done before the re-loop.
 	}
 }
 

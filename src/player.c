@@ -18,13 +18,25 @@ void draw_player(Player *p) {
 
 
 void player_move(Player *p, Level *lvl, int key) { //Player movement
-    int nx = p->x;
+    int nx = p->x; 
     int ny = p->y;
 
-    if (key == 'w' || key == 'W') ny--; //moves player up (Y-axis)
-    if (key == 's' || key == 'S') ny++; //moves player down (Y-axis)
-    if (key == 'a' || key == 'A') nx--; //moves player left (X-axis)
-    if (key == 'd' || key == 'D') nx++; //moves player right (X-axis)
+    //Updates player location based on x/y position by -+1 on said x,y direction.
+    if (key == 'w' || key == 'W'){
+        ny--; //moves player up (Y-axis)
+    }
+
+    if (key == 's' || key == 'S'){
+        ny++; //moves player down (Y-axis)
+    } 
+
+    if (key == 'a' || key == 'A'){
+        nx--; //moves player left (X-axis)
+    }
+
+    if (key == 'd' || key == 'D'){
+        nx++; //moves player right (X-axis)
+    } 
 
     if (is_walkable(lvl, nx, ny)) { //Checks if the new postion/coordinate is an empty spot and not a border/wall.
         p->x = nx;
