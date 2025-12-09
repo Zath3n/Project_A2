@@ -1,12 +1,7 @@
 //ID: 3143692 Name: Kye Rich
 //ID: 3132175 Name: Gabriel
 
-
-#include <ncurses.h>
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-
+#include <curses.h>
 
 #define WIDTH 80
 #define HEIGHT 30

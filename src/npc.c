@@ -1,9 +1,10 @@
 // ID: 3143692 Name: Kye Rich
 // ID: 3132175 Name: Gabriel
 
-#include <ncurses.h>
+#include <curses.h>
 #include <stdlib.h>
 #include <unistd.h>
+
 #include "npc.h"
 #include "levels.h"
 #include "player.h"
@@ -32,7 +33,9 @@ void npc_move(NPC *n, Level *lvl, Player *p) {
     n->move_counter = 0;
 
     int directions[4][2] = {{0,-1},{0,1},{-1,0},{1,0}};
-    int idx = rand() % 4;
+
+    int idx = rand() % 4; //chose a random direction to move in.
+
     int nx = n->x + directions[idx][0];
     int ny = n->y + directions[idx][1];
 
@@ -44,8 +47,8 @@ void npc_move(NPC *n, Level *lvl, Player *p) {
 }
 void npc_dialog(Player *p, NPC *n){	//talking interactions
 
-	int dx = abs(p->x - n->x);
-	int dy = abs(p->y - n->y);
+	int dx = (p->x - n->x);
+	int dy = (p->y - n->y);
 
 	if (dx + dy != 1) {	//Player not beside NPC, notify user they need to be.
 		clear();

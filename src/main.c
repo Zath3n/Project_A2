@@ -1,11 +1,7 @@
 // ID: 3143692 Name: Kye Rich
 // ID: 3132175 Name: Gabriel
 
-#include <ncurses.h>
-#include <stdlib.h>
-#include <time.h>
-#include <unistd.h>
-
+#include <curses.h>
 #include "player.h"
 #include "npc.h"
 #include "levels.h"
