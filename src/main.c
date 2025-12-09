@@ -24,6 +24,45 @@ int SplashArt(){
 
 	clear(); 
 
+
+	mvprintw(1, 4, "  *  ");
+	mvprintw(2, 4, " * * ");
+	mvprintw(3, 4, "*   *");
+	mvprintw(4, 4, " * * ");
+	mvprintw(5, 4, "  *  ");
+
+	mvprintw(8, 8, "  *  ");
+	mvprintw(9, 8, " * * ");
+	mvprintw(10, 8, "*   *");
+	mvprintw(11, 8, " * * ");
+	mvprintw(12, 8, "  *  ");
+
+	mvprintw(16, 6, "   *   ");
+	mvprintw(17, 6, "  * *  ");
+	mvprintw(18, 6, " *   * ");
+	mvprintw(19, 6, "*     *");
+	mvprintw(20, 6, " *   * ");
+	mvprintw(21, 6, "  * *  ");
+	mvprintw(22, 6, "   *  ");
+
+	mvprintw(3, 65, "  *  ");
+	mvprintw(4, 65, " * * ");
+	mvprintw(5, 65, "*   *");
+	mvprintw(6, 65, " * * ");
+	mvprintw(7, 65, "  *  ");
+
+	mvprintw(11, 63, "  *  ");
+	mvprintw(12, 63, " * * ");
+	mvprintw(13, 63, "*   *");
+	mvprintw(14, 63, " * * ");
+	mvprintw(15, 63, "  *  ");
+
+	mvprintw(18, 70, "  *  ");
+	mvprintw(19, 70, " * * ");
+	mvprintw(20, 70, "*   *");
+	mvprintw(21, 70, " * * ");
+	mvprintw(22, 70, "  *  ");
+
 	mvprintw(2, 16, "  /$$      /$$  /$$$$$$  /$$$$$$$$ /$$$$$$$$  ");
 	mvprintw(3, 16, " | $$$    /$$$ /$$__  $$|_____ $$ | $$_____/  ");
 	mvprintw(4, 16, " | $$$$  /$$$$| $$  \\ $$     /$$/ | $$        ");
@@ -198,7 +237,7 @@ void run_level(void (*load_fn)(Level*)) {
 
     				lvl.tiles[player.y][player.x] = 'l';
 
-    				lvl.tiles[HEIGHT-4][WIDTH-3] = ' ';
+    				lvl.tiles[HEIGHT-6][WIDTH-2] = ' ';
 
 
 				// Give player a message
