@@ -210,11 +210,9 @@ void run_level(void (*load_fn)(Level*)) {
 int main(){
 
     clear();
-    srand(time(NULL));
     initscr();
     noecho();
-    cbreak();
-    keypad(stdscr, TRUE);
+
 
     SplashArt();
 
