@@ -31,5 +31,3 @@ void player_move(Player *p, Level *lvl, int key) { //Player movement
         p->y = ny;
     }
 }
-
->>>>>>> Stashed changes

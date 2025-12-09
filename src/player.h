@@ -52,4 +52,3 @@ void player_move(Player *p, Level *lvl, int key);
 int player_reached_exit(Player *p, Level *lvl);
 
 #endif
->>>>>>> Stashed changes
