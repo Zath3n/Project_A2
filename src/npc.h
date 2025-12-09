@@ -1,6 +1,6 @@
 /********************************************************
  * @file npc.h                  
- * @Brief   
+ * @Brief Public interface for a non-playable character
  * @author Kye R. ID:3143692 & Gabriel N. ID: 3132176                   
  * @date Dec. 9, 2025                  
  ********************************************************/

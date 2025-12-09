@@ -30,6 +30,8 @@ static void lvl1_top_path(Level *lvl) {
     int y = 2;
     int x = 1;
 
+    // makes path in top of screen to left
+
     while (x < WIDTH - 3){
         lvl->tiles[y][x++] = ' ';
     }
@@ -52,6 +54,7 @@ static void lvl1_bottom_path(Level *lvl) {
     }
 }
 
+//makes path from middle of screen left
 static void lvl1_middle_path(Level *lvl) {
     int y = HEIGHT/2;
     for (int x = 1; x < WIDTH - 2; x++){
@@ -59,6 +62,7 @@ static void lvl1_middle_path(Level *lvl) {
     }
 }
 
+//creates the level
 void load_level1(Level *lvl) {
     make_border(lvl);
     lvl1_top_path(lvl);
@@ -78,6 +82,7 @@ static void wide3(Level *lvl, int y, int x) {
     lvl->tiles[y+1][x] = ' ';
 }
 
+//makes a open box in top left
 static void lvl2_start_area(Level *lvl) {
     for (int y = 1; y <= 3; y++)
         for (int x = 1; x <= 5; x++){
@@ -85,6 +90,7 @@ static void lvl2_start_area(Level *lvl) {
         }
 }
 
+//makes a box in bottom right
 static void lvl2_exit_area(Level *lvl) {
     for (int y = 26; y <= 28; y++)
         for (int x = 74; x <= 78; x++){
@@ -92,7 +98,7 @@ static void lvl2_exit_area(Level *lvl) {
         }
 }
 
-
+// makes a box top right
 static void lvl2_npc_area(Level *lvl) {
     for (int y = 4; y <= 10; y++)
         for (int x = 65; x <= 75; x++){
@@ -101,6 +107,7 @@ static void lvl2_npc_area(Level *lvl) {
 }
 
 
+//makes a path to box top right 
 static void lvl2_npc_connect(Level *lvl){
 
 	int x = 14; 
@@ -111,6 +118,7 @@ static void lvl2_npc_connect(Level *lvl){
 	}
 }
 
+//makes the box thats bottom left
 static void lvl2_random_box(Level *lvl) {
     for (int y = 25; y <= 28; y++)
         for (int x = 3; x <= 9; x++){
@@ -118,6 +126,7 @@ static void lvl2_random_box(Level *lvl) {
         }
 }
 
+//makes a line from box bottom right towards F
 static void lvl2_random_box_line(Level *lvl) {
     int x = 9, y = 26;
 
@@ -129,7 +138,9 @@ static void lvl2_random_box_line(Level *lvl) {
         lvl->tiles[y--][x] = ' ';
     } 
 }
+// makes path to F
 
+//diagonal, down, right ,down
 static void lvl2_correct_path(Level *lvl) {
     int x = 3;
     int y = 3;
@@ -155,6 +166,8 @@ static void lvl2_correct_path(Level *lvl) {
     }
 }
 
+
+//makes dead end path
 static void lvl2_wrong_path1(Level *lvl) {
     int x = 3;
     int y = 3;
@@ -169,6 +182,7 @@ static void lvl2_wrong_path1(Level *lvl) {
 
 }
 
+//makes dead end path
 static void lvl2_wrong_path2(Level *lvl) {
     int x = 3;
     int y = 3;
@@ -182,6 +196,7 @@ static void lvl2_wrong_path2(Level *lvl) {
     }
 }
 
+// creates the maze by calling funtions
 void load_level2(Level *lvl) {
     make_border(lvl);
     lvl2_start_area(lvl);

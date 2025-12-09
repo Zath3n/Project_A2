@@ -1,6 +1,6 @@
 /********************************************************
  * @file player.c                   
- * @Brief Public interface for a playing character      
+ * @Brief Definition of the functions in player.h      
  * @author Kye R. ID:3143692 & Gabriel N. ID: 3132176                   
  * @date Dec. 9, 2025                  
  ********************************************************/

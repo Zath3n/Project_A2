@@ -1,5 +1,9 @@
-// ID: 3143692 Name: Kye Rich
-// ID: 3132175 Name: Gabriel
+/********************************************************
+ * @file npc.c                  
+ * @Brief Definition of the functions in npc.h       
+ * @author Kye R. ID:3143692 & Gabriel N. ID: 3132176                   
+ * @date Dec. 9, 2025                  
+ ********************************************************/
 
 #include <curses.h>
 #include "player.h"
@@ -54,7 +58,7 @@ int SplashArt(){
  */
 int MainMenuScreen(){
 
-	clear(); //remove any previous text.
+	clear();
 
 	mvprintw(5, 25, "===============================");
 	mvprintw(6, 25, "       TERMINAL MAZE GAME      ");
@@ -85,7 +89,7 @@ int MainMenuScreen(){
 
 /**
  * 
- *Pauses the game if the player presses P by switching the screen to the pause menu, until the
+ * Pauses the game if the player presses P by switching the screen to the pause menu, until the
  * user presses "p" or "P" to continue the game again.
  * 
  */
@@ -104,7 +108,7 @@ void pause_game() {
 /**
  * 
  *Switches the screen to the win menu, telling the user they reached the end, until the user presses
- * "p" or "P" to back to the menu.
+ *"p" or "P" to back to the menu.
  * 
  */
 void win_screen() {
@@ -131,7 +135,10 @@ int player_reached_exit(Player *player, Level *lvl) {
 
 /**
  * 
- *Function that handles running the game. NPC spawn location is changed depending on the level loeaded to
+ *Function that handles running the game. NPC spawn location is changed depending on the level loaded.
+ *Initalizes playerand NPC, and uses a while loop to process input/movement to redraw the screen, with
+ * additional functions such as to pause, exit, talking to NPC, and if the player reaches the end.
+ * 
  */
 void run_level(void (*load_fn)(Level*)) {
 
@@ -200,7 +207,8 @@ void run_level(void (*load_fn)(Level*)) {
 
 /**
  * 
- *
+ *Initalize curses, show splash screeen, and loop to create a menu for user input.
+ *Loads and run different level or exit program based on said user input.
  * 
  */
 int main(){

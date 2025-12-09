@@ -1,6 +1,6 @@
 /********************************************************
  * @file npc.c                  
- * @Brief   
+ * @Brief Definition of the functions in npc.h       
  * @author Kye R. ID:3143692 & Gabriel N. ID: 3132176                   
  * @date Dec. 9, 2025                  
  ********************************************************/
