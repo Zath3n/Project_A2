@@ -1,6 +1,6 @@
-<<<<<<< Updated upstream
-//test
-=======
+// ID: 3143692 Name: Kye Rich
+// ID: 3132175 Name: Gabriel
+
 #include <ncurses.h>
 #include <stdlib.h>
 #include <time.h>

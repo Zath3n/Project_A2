@@ -20,7 +20,7 @@ void draw_npc(NPC *n){
 	mvaddch(n->y, n->x, 'N');
 }
 
-// npc.c
+
 void npc_move(NPC *n, Level *lvl, Player *p) {
 
     n->move_counter++;
